@@ -6,7 +6,7 @@ function quickSort(array) {
         let pivotIndex = start; // Choose the first element as pivot
         let left = start + 1; // Index to traverse from left to right
         let right = end; // Index to traverse from right to left
-        
+
         // Loop until the left and right indices cross each other
         while (left <= right) {
             // Find the element greater than pivot from the left side

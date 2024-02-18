@@ -1,6 +1,6 @@
 function mergeSort(arr) {
     const steps = [];
-    
+
     // Function to recursively split the array into halves
     function split(arr) {
         if (arr.length <= 1) return arr;
@@ -17,7 +17,7 @@ function mergeSort(arr) {
         let result = [];
         let leftIndex = 0;
         let rightIndex = 0;
-    
+
         while (leftIndex < left.length && rightIndex < right.length) {
             if (left[leftIndex] < right[rightIndex]) {
                 result.push(left[leftIndex]);
@@ -27,13 +27,13 @@ function mergeSort(arr) {
                 rightIndex++;
             }
         }
-    
+
         // Append remaining elements if any
         while (leftIndex < left.length) {
             result.push(left[leftIndex]);
             leftIndex++;
         }
-    
+
         while (rightIndex < right.length) {
             result.push(right[rightIndex]);
             rightIndex++;
@@ -43,14 +43,14 @@ function mergeSort(arr) {
         if (leftArray.length + rightArray.length === arr.length) {
             result.push(arr[arr.length - 1]);
         }
-    
+
         // Append the current state of the array to the steps array
         const currentArray = [...result];
         steps.push(currentArray);
-    
+
         return result;
     }
-    
+
     split(arr);
-    return steps; 
+    return steps;
 }
